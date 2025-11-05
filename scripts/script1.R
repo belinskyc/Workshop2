@@ -3,8 +3,6 @@ rm(list=ls());
 babyNameData = read.csv(file="data/Popular_Baby_Names.csv");
 babyNames = babyNameData$Name;
 
-weatherData = read.csv(file="data/Lansing2016Noaa-3.csv");
-
 ### Look for the substring "beth", don't worry if its uppercase/lowercase
 has_Beth = grep("beth", babyNameData$Name, ignore.case=TRUE);
 has_Liz = grep("liz", babyNameData$Name, ignore.case=TRUE);
@@ -202,3 +200,4 @@ be_names = unique(babyNames[repeat_group]);
 # # invertCondition = setdiff(1:10, meetsCondition);
 # # 
 # # daysWithoutPrecip = setdiff(1:366, daysWithPrecipGrep);
+
